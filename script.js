@@ -30,5 +30,17 @@ function changeColor() {
     });
 }
 
+// Function to launch confetti
+function launchConfetti() {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { x: 0.5, y: 0.6 }, // Center of the screen
+    });
+}
+
 // Add a click event listener to the button
-button.addEventListener('click', changeColor);
+button.addEventListener('click', () => {
+    changeColor();
+    launchConfetti();
+});
